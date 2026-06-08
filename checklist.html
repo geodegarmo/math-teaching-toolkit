@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson Planning Checklist — Math Teaching Toolkit</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+<div class="overlay" id="overlay"></div>
+<nav class="sidenav" id="sidenav">
+  <div class="sidenav-brand"><a href="index.html"><div class="brand-eyebrow">NC Math 8 + Math 1</div><div class="brand-name">Math Teaching Toolkit</div></a></div>
+  <div class="nav-group"><span class="nav-group-label">Course Content</span>
+    <a class="nav-link" href="math8.html"><span class="icon">📐</span> Math 8 (EOG)</a>
+    <a class="nav-link" href="math1.html"><span class="icon">📈</span> Math 1 (EOC)</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Planning</span>
+    <a class="nav-link" href="differentiation.html"><span class="icon">🎯</span> Differentiation</a>
+    <a class="nav-link" href="pacing.html"><span class="icon">📅</span> Pacing &amp; Calendar</a>
+    <a class="nav-link" href="checklist.html"><span class="icon">✅</span> Lesson Checklist</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Classroom Tools</span>
+    <a class="nav-link" href="donow.html"><span class="icon">🔀</span> Do-Now Generator</a>
+    <a class="nav-link" href="timer.html"><span class="icon">⏱</span> Block Timer</a>
+    <a class="nav-link" href="exit-sort.html"><span class="icon">🃏</span> Exit Ticket Sorter</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Print</span>
+    <a class="nav-link" href="lesson-plan.html"><span class="icon">📄</span> Lesson Plan Template</a>
+    <a class="nav-link" href="reference-cards.html"><span class="icon">🗂</span> Student Reference Cards</a>
+  </div>
+  <div class="nav-footer">NC Standard Course of Study<br>Math 8 EOG · Math 1 EOC</div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <div class="page-eyebrow">Planning Resource</div>
+    <h1>Lesson Planning <em>Checklist</em></h1>
+    <p class="sub">Run a lesson through this before you teach it. Maps onto the Sticky Math Block and the three pain points. Progress saves between sessions.</p>
+  </div>
+
+  <div class="content">
+
+    <div class="progress-row">
+      <span class="progress-text" id="progLabel">0 of 17 complete</span>
+      <div class="progbar"><i id="progFill"></i></div>
+      <button class="btn btn-sm btn-ghost" id="resetBtn">Reset</button>
+    </div>
+
+    <label class="notes-label">Today's lesson topic (saved automatically)</label>
+    <textarea class="notes-field" data-note="today-topic" rows="2" placeholder="e.g., NC.8.EE.7 — solving linear equations with special cases (Day 2 of 3)"></textarea>
+
+    <!-- SECTION 1 -->
+    <div class="checkgroup" style="margin-top:24px">
+      <h3>Before the Block</h3>
+      <label class="check"><input type="checkbox" data-id="c1"><span>Spiral Do-Now is written — pulls from <strong>yesterday</strong>, <strong>last week</strong>, and at least one earlier high-weight domain (not just today's topic).</span></label>
+      <label class="check"><input type="checkbox" data-id="c2"><span>The day's idea is launched as a <strong>question or hook</strong>, not a definition to copy.</span></label>
+      <label class="check"><input type="checkbox" data-id="c3"><span>I can state the <strong>one thing</strong> every student should be able to do by the exit ticket.</span></label>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="checkgroup">
+      <h3>Making It Stick (Retention)</h3>
+      <label class="check"><input type="checkbox" data-id="c4"><span>For hard concepts, I've planned a <strong>Concrete → Representational → Abstract</strong> path — not a leap straight to the formula.</span></label>
+      <label class="check"><input type="checkbox" data-id="c5"><span>Students will <strong>co-build notes</strong> from the discussion, not just receive a finished page.</span></label>
+      <label class="check"><input type="checkbox" data-id="c6"><span>This topic will <strong>re-appear in a future Do-Now</strong> (I've noted which day).</span></label>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="checkgroup">
+      <h3>Reaching Everyone (Differentiation)</h3>
+      <label class="check"><input type="checkbox" data-id="c7"><span>The Explore task has a <strong>low floor</strong> (anyone can start) and a <strong>high ceiling</strong> (an extension exists).</span></label>
+      <label class="check"><input type="checkbox" data-id="c8"><span>There is a <strong>scaffold lane</strong> (frame, worked example, manipulative, or visual) AND a <strong>may-do extension</strong>.</span></label>
+      <label class="check"><input type="checkbox" data-id="c9"><span>Today's <strong>grouping is based on recent data</strong>, not a fixed ability track.</span></label>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="checkgroup">
+      <h3>Time &amp; Structure (Pacing)</h3>
+      <label class="check"><input type="checkbox" data-id="c10"><span>Each block phase has a <strong>time box</strong>, and the total fits my actual period length.</span></label>
+      <label class="check"><input type="checkbox" data-id="c11"><span>Time on this topic is <strong>proportional to its EOG/EOC weight</strong> — I'm not over-investing in a low-weight domain.</span></label>
+      <label class="check"><input type="checkbox" data-id="c12"><span>I have a <strong>25-minute "minimum viable" version</strong> if the period gets cut short.</span></label>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="checkgroup">
+      <h3>The 5 Practices (During Explore)</h3>
+      <label class="check"><input type="checkbox" data-id="c13"><span><strong>Anticipate</strong> — I've listed the responses and strategies I expect, including the common wrong ones.</span></label>
+      <label class="check"><input type="checkbox" data-id="c14"><span><strong>Monitor &amp; Select &amp; Sequence</strong> — I know which student work I'll showcase and in what order (concrete/partial first).</span></label>
+      <label class="check"><input type="checkbox" data-id="c15"><span><strong>Connect</strong> — I've planned the question that links the shared strategies to the formal mathematical idea.</span></label>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="checkgroup">
+      <h3>Exit Ticket</h3>
+      <label class="check"><input type="checkbox" data-id="c16"><span>The exit ticket asks the <strong>one thing</strong> I identified in item 3 — no more, no less.</span></label>
+      <label class="check"><input type="checkbox" data-id="c17"><span>I know <strong>how I'll sort the tickets</strong> (got it / almost / not yet) and what tomorrow's Do-Now will look like if more than ⅓ land in "not yet."</span></label>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Planning Notes</div>
+      <label class="notes-label">Lesson notes &amp; decisions (saved automatically)</label>
+      <textarea class="notes-field" data-note="lesson-notes" rows="5" placeholder="Anticipations, student grouping plan, which Do-Now problems to use, exit ticket question…"></textarea>
+      <label class="notes-label" style="margin-top:14px">Exit ticket results (fill in after class)</label>
+      <textarea class="notes-field" data-note="exit-results" rows="3" placeholder="Got it: ___ / Almost: ___ / Not yet: ___ — Tomorrow's reteach plan: …"></textarea>
+    </div>
+
+  </div>
+  <footer>Checklist maps to the Sticky Math Block and Smith &amp; Stein's <i>5 Practices for Orchestrating Productive Mathematics Discussions</i>. Progress saves in your browser's localStorage.</footer>
+</main>
+
+<script src="js/app.js"></script>
+<script>
+  initChecklist('daily');
+  initNotes('checklist');
+</script>
+</body>
+</html>

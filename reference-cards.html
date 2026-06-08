@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Reference Cards — Math Teaching Toolkit</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<button class="nav-toggle no-print" id="navToggle" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+<div class="overlay no-print" id="overlay"></div>
+<nav class="sidenav no-print" id="sidenav">
+  <div class="sidenav-brand"><a href="index.html"><div class="brand-eyebrow">NC Math 8 + Math 1</div><div class="brand-name">Math Teaching Toolkit</div></a></div>
+  <div class="nav-group"><span class="nav-group-label">Course Content</span>
+    <a class="nav-link" href="math8.html"><span class="icon">📐</span> Math 8 (EOG)</a>
+    <a class="nav-link" href="math1.html"><span class="icon">📈</span> Math 1 (EOC)</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Planning</span>
+    <a class="nav-link" href="differentiation.html"><span class="icon">🎯</span> Differentiation</a>
+    <a class="nav-link" href="pacing.html"><span class="icon">📅</span> Pacing &amp; Calendar</a>
+    <a class="nav-link" href="checklist.html"><span class="icon">✅</span> Lesson Checklist</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Classroom Tools</span>
+    <a class="nav-link" href="donow.html"><span class="icon">🔀</span> Do-Now Generator</a>
+    <a class="nav-link" href="timer.html"><span class="icon">⏱</span> Block Timer</a>
+    <a class="nav-link" href="exit-sort.html"><span class="icon">🃏</span> Exit Ticket Sorter</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Print</span>
+    <a class="nav-link" href="lesson-plan.html"><span class="icon">📄</span> Lesson Plan Template</a>
+    <a class="nav-link" href="reference-cards.html"><span class="icon">🗂</span> Student Reference Cards</a>
+  </div>
+  <div class="nav-footer">NC Standard Course of Study<br>Math 8 EOG · Math 1 EOC</div>
+</nav>
+
+<main>
+  <div class="page-header no-print">
+    <div class="page-eyebrow">Print Material</div>
+    <h1>Student <em>Reference Cards</em></h1>
+    <p class="sub">Half-page cards for key formulas and vocabulary. Print on cardstock, cut along the dashed lines, and laminate. One set per student or one set per table group.</p>
+    <div class="btn-group">
+      <button class="btn btn-ochre" onclick="window.print()">Print / Save PDF</button>
+    </div>
+  </div>
+
+  <div class="content print-wrap">
+
+    <div class="ref-card-grid">
+
+      <!-- CARD 1: Exponent rules -->
+      <div class="ref-card">
+        <div class="std-badge">NC.8.EE.1</div>
+        <h3>Exponent Rules</h3>
+        <div class="ref-row"><span class="concept">Product rule</span><span class="formula">xᵃ · xᵇ = xᵃ⁺ᵇ</span></div>
+        <div class="ref-row"><span class="concept">Quotient rule</span><span class="formula">xᵃ ÷ xᵇ = xᵃ⁻ᵇ</span></div>
+        <div class="ref-row"><span class="concept">Power rule</span><span class="formula">(xᵃ)ᵇ = xᵃᵇ</span></div>
+        <div class="ref-row"><span class="concept">Zero exponent</span><span class="formula">x⁰ = 1</span></div>
+        <div class="ref-row"><span class="concept">Negative exponent</span><span class="formula">x⁻ⁿ = 1/xⁿ</span></div>
+        <div class="ref-row"><span class="concept">Why zero works</span><span class="formula">2³÷2³ = 2⁰ = 1</span></div>
+      </div>
+
+      <!-- CARD 2: Scientific Notation -->
+      <div class="ref-card">
+        <div class="std-badge">NC.8.EE.3–4</div>
+        <h3>Scientific Notation</h3>
+        <div class="ref-row"><span class="concept">Proper form</span><span class="formula">a × 10ⁿ, 1 ≤ a &lt; 10</span></div>
+        <div class="ref-row"><span class="concept">Large number</span><span class="formula">370,000 = 3.7 × 10⁵</span></div>
+        <div class="ref-row"><span class="concept">Small number</span><span class="formula">0.00042 = 4.2 × 10⁻⁴</span></div>
+        <div class="ref-row"><span class="concept">Multiply</span><span class="formula">(a×10ᵐ)(b×10ⁿ) = ab×10ᵐ⁺ⁿ</span></div>
+        <div class="ref-row"><span class="concept">Divide</span><span class="formula">(a×10ᵐ)÷(b×10ⁿ) = (a÷b)×10ᵐ⁻ⁿ</span></div>
+      </div>
+
+      <!-- CARD 3: Slope & Linear -->
+      <div class="ref-card">
+        <div class="std-badge">NC.8.EE.5–6 · NC.8.F.4</div>
+        <h3>Slope &amp; Linear Functions</h3>
+        <div class="ref-row"><span class="concept">Slope formula</span><span class="formula">m = (y₂−y₁)/(x₂−x₁)</span></div>
+        <div class="ref-row"><span class="concept">Slope-intercept</span><span class="formula">y = mx + b</span></div>
+        <div class="ref-row"><span class="concept">m is…</span><span class="formula">rate of change</span></div>
+        <div class="ref-row"><span class="concept">b is…</span><span class="formula">starting value (x=0)</span></div>
+        <div class="ref-row"><span class="concept">Positive slope</span><span class="formula">rises left → right</span></div>
+        <div class="ref-row"><span class="concept">Negative slope</span><span class="formula">falls left → right</span></div>
+        <div class="ref-row"><span class="concept">Zero slope</span><span class="formula">horizontal line</span></div>
+      </div>
+
+      <!-- CARD 4: Pythagorean Theorem -->
+      <div class="ref-card">
+        <div class="std-badge">NC.8.G.7–8</div>
+        <h3>Pythagorean Theorem</h3>
+        <div class="ref-row"><span class="concept">Theorem</span><span class="formula">a² + b² = c²</span></div>
+        <div class="ref-row"><span class="concept">c is always…</span><span class="formula">the hypotenuse</span></div>
+        <div class="ref-row"><span class="concept">Find hypotenuse</span><span class="formula">c = √(a² + b²)</span></div>
+        <div class="ref-row"><span class="concept">Find a leg</span><span class="formula">a = √(c² − b²)</span></div>
+        <div class="ref-row"><span class="concept">Right triangle check</span><span class="formula">a² + b² = c²?</span></div>
+        <div class="ref-row"><span class="concept">Distance formula</span><span class="formula">d = √(Δx² + Δy²)</span></div>
+      </div>
+
+      <!-- CARD 5: Transformations -->
+      <div class="ref-card">
+        <div class="std-badge">NC.8.G.1–5</div>
+        <h3>Transformations</h3>
+        <div class="ref-row"><span class="concept">Translate (h,k)</span><span class="formula">(x+h, y+k)</span></div>
+        <div class="ref-row"><span class="concept">Reflect over x-axis</span><span class="formula">(x, −y)</span></div>
+        <div class="ref-row"><span class="concept">Reflect over y-axis</span><span class="formula">(−x, y)</span></div>
+        <div class="ref-row"><span class="concept">Rotate 90° CCW</span><span class="formula">(−y, x)</span></div>
+        <div class="ref-row"><span class="concept">Rotate 180°</span><span class="formula">(−x, −y)</span></div>
+        <div class="ref-row"><span class="concept">Dilation (scale k)</span><span class="formula">(kx, ky)</span></div>
+        <div class="ref-row"><span class="concept">Rigid (congruent)</span><span class="formula">translate/reflect/rotate</span></div>
+      </div>
+
+      <!-- CARD 6: Volume -->
+      <div class="ref-card">
+        <div class="std-badge">NC.8.G.9</div>
+        <h3>Volume Formulas</h3>
+        <div class="ref-row"><span class="concept">Cylinder</span><span class="formula">V = πr²h</span></div>
+        <div class="ref-row"><span class="concept">Cone</span><span class="formula">V = ⅓πr²h</span></div>
+        <div class="ref-row"><span class="concept">Sphere</span><span class="formula">V = ⁴⁄₃πr³</span></div>
+        <div class="ref-row"><span class="concept">Cone vs cylinder</span><span class="formula">V_cone = ⅓V_cyl</span></div>
+        <div class="ref-row"><span class="concept">r vs d</span><span class="formula">r = diameter ÷ 2</span></div>
+      </div>
+
+      <!-- CARD 7: Function families -->
+      <div class="ref-card">
+        <div class="std-badge">NC.M1.F-LE · NC.M1.F-IF</div>
+        <h3>Function Family Fingerprints</h3>
+        <div class="ref-row"><span class="concept">Constant Δy</span><span class="formula">→ Linear</span></div>
+        <div class="ref-row"><span class="concept">Constant ratio y</span><span class="formula">→ Exponential</span></div>
+        <div class="ref-row"><span class="concept">Constant Δ²y</span><span class="formula">→ Quadratic</span></div>
+        <div class="ref-row"><span class="concept">Linear equation</span><span class="formula">y = mx + b</span></div>
+        <div class="ref-row"><span class="concept">Exponential</span><span class="formula">y = a · bˣ</span></div>
+        <div class="ref-row"><span class="concept">Quadratic</span><span class="formula">y = ax² + bx + c</span></div>
+        <div class="ref-row"><span class="concept">Growth b &gt; 1; decay</span><span class="formula">0 &lt; b &lt; 1</span></div>
+      </div>
+
+      <!-- CARD 8: Quadratic algebra -->
+      <div class="ref-card">
+        <div class="std-badge">NC.M1.A-REI · NC.M1.A-SSE</div>
+        <h3>Quadratic Toolkit</h3>
+        <div class="ref-row"><span class="concept">Quadratic formula</span><span class="formula">x = (−b ± √(b²−4ac)) / 2a</span></div>
+        <div class="ref-row"><span class="concept">Axis of symmetry</span><span class="formula">x = −b / 2a</span></div>
+        <div class="ref-row"><span class="concept">Vertex form</span><span class="formula">y = a(x−h)² + k</span></div>
+        <div class="ref-row"><span class="concept">Vertex</span><span class="formula">(h, k)</span></div>
+        <div class="ref-row"><span class="concept">Diff. of squares</span><span class="formula">x²−n² = (x+n)(x−n)</span></div>
+        <div class="ref-row"><span class="concept">Opens up if</span><span class="formula">a &gt; 0</span></div>
+        <div class="ref-row"><span class="concept">Opens down if</span><span class="formula">a &lt; 0</span></div>
+      </div>
+
+      <!-- CARD 9: Statistics -->
+      <div class="ref-card">
+        <div class="std-badge">NC.8.SP · NC.M1.S-ID</div>
+        <h3>Statistics Vocabulary</h3>
+        <div class="ref-row"><span class="concept">Mean</span><span class="formula">sum ÷ count</span></div>
+        <div class="ref-row"><span class="concept">Median</span><span class="formula">middle value</span></div>
+        <div class="ref-row"><span class="concept">IQR</span><span class="formula">Q3 − Q1</span></div>
+        <div class="ref-row"><span class="concept">r close to ±1</span><span class="formula">strong correlation</span></div>
+        <div class="ref-row"><span class="concept">r close to 0</span><span class="formula">weak/no correlation</span></div>
+        <div class="ref-row"><span class="concept">r² (coeff. det.)</span><span class="formula">% variation explained</span></div>
+        <div class="ref-row"><span class="concept">Outlier shifts</span><span class="formula">mean more than median</span></div>
+      </div>
+
+      <!-- CARD 10: Exponential context -->
+      <div class="ref-card">
+        <div class="std-badge">NC.M1.F-LE.1–2</div>
+        <h3>Exponential Models</h3>
+        <div class="ref-row"><span class="concept">General form</span><span class="formula">f(t) = a · bᵗ</span></div>
+        <div class="ref-row"><span class="concept">a is…</span><span class="formula">initial value (t = 0)</span></div>
+        <div class="ref-row"><span class="concept">b is…</span><span class="formula">growth/decay factor</span></div>
+        <div class="ref-row"><span class="concept">r% growth</span><span class="formula">b = 1 + r</span></div>
+        <div class="ref-row"><span class="concept">r% decay</span><span class="formula">b = 1 − r</span></div>
+        <div class="ref-row"><span class="concept">4% growth →</span><span class="formula">b = 1.04</span></div>
+        <div class="ref-row"><span class="concept">15% decay →</span><span class="formula">b = 0.85</span></div>
+      </div>
+
+    </div><!-- /ref-card-grid -->
+
+  </div>
+  <footer class="no-print">Print settings: landscape recommended, letter size, margins narrow. Cut along card borders and laminate for durability.</footer>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

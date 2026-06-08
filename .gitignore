@@ -1,0 +1,10 @@
+# Claude Code local settings (keep out of repo)
+.claude/settings.local.json
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/

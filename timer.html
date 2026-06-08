@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Block Phase Timer — Math Teaching Toolkit</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+<div class="overlay" id="overlay"></div>
+<nav class="sidenav" id="sidenav">
+  <div class="sidenav-brand"><a href="index.html"><div class="brand-eyebrow">NC Math 8 + Math 1</div><div class="brand-name">Math Teaching Toolkit</div></a></div>
+  <div class="nav-group"><span class="nav-group-label">Course Content</span>
+    <a class="nav-link" href="math8.html"><span class="icon">📐</span> Math 8 (EOG)</a>
+    <a class="nav-link" href="math1.html"><span class="icon">📈</span> Math 1 (EOC)</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Planning</span>
+    <a class="nav-link" href="differentiation.html"><span class="icon">🎯</span> Differentiation</a>
+    <a class="nav-link" href="pacing.html"><span class="icon">📅</span> Pacing &amp; Calendar</a>
+    <a class="nav-link" href="checklist.html"><span class="icon">✅</span> Lesson Checklist</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Classroom Tools</span>
+    <a class="nav-link" href="donow.html"><span class="icon">🔀</span> Do-Now Generator</a>
+    <a class="nav-link" href="timer.html"><span class="icon">⏱</span> Block Timer</a>
+    <a class="nav-link" href="exit-sort.html"><span class="icon">🃏</span> Exit Ticket Sorter</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Print</span>
+    <a class="nav-link" href="lesson-plan.html"><span class="icon">📄</span> Lesson Plan Template</a>
+    <a class="nav-link" href="reference-cards.html"><span class="icon">🗂</span> Student Reference Cards</a>
+  </div>
+  <div class="nav-footer">NC Standard Course of Study<br>Math 8 EOG · Math 1 EOC</div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <div class="page-eyebrow">Classroom Tool</div>
+    <h1>Block Phase <em>Timer</em></h1>
+    <p class="sub">Project this on your board. Walks through all five phases of the Sticky Math Block with adjustable times per phase.</p>
+  </div>
+
+  <div class="content">
+
+    <!-- Phase durations (editable) -->
+    <div class="section">
+      <div class="section-label">Set phase durations (minutes)</div>
+      <div id="phaseSetup" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:20px"></div>
+      <div class="btn-group">
+        <button class="btn btn-ochre" id="startBtn">Start timer</button>
+        <button class="btn btn-ghost" id="resetSetupBtn">Reset to defaults</button>
+      </div>
+    </div>
+
+    <!-- Timer display (hidden until started) -->
+    <div id="timerDisplay" style="display:none">
+      <div class="timer-wrap">
+        <div class="timer-phase-name" id="phaseName">Spiral Do-Now</div>
+        <div class="timer-clock" id="clockFace">7:00</div>
+        <div class="timer-phases" id="phasePips"></div>
+        <div class="timer-controls">
+          <button class="btn btn-primary" id="pauseBtn">Pause</button>
+          <button class="btn" id="skipBtn">Skip phase →</button>
+          <button class="btn btn-ghost" id="backToSetupBtn">Edit times</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <footer>Timer runs in-browser — keep this tab open while projecting. Audio cue plays when each phase ends (requires browser permission for audio on some devices).</footer>
+</main>
+
+<script src="js/app.js"></script>
+<script>
+  const DEFAULT_PHASES = [
+    { name: 'Spiral Do-Now',     def: 7,  min: 3, max: 15 },
+    { name: 'Launch',            def: 5,  min: 2, max: 10 },
+    { name: 'Explore',           def: 22, min: 10, max: 35 },
+    { name: 'Discuss & Lock-In', def: 11, min: 5, max: 20 },
+    { name: 'Exit Ticket',       def: 4,  min: 2, max: 10 }
+  ];
+
+  let durations = DEFAULT_PHASES.map(p => p.def);
+  let currentPhase = 0;
+  let secondsLeft = 0;
+  let running = false;
+  let timerId = null;
+
+  // Build setup inputs
+  const phaseSetup = document.getElementById('phaseSetup');
+  DEFAULT_PHASES.forEach((phase, i) => {
+    const div = document.createElement('div');
+    div.innerHTML = `
+      <label style="display:block;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:5px">${phase.name}</label>
+      <div style="display:flex;align-items:center;gap:8px">
+        <input type="number" id="dur${i}" value="${phase.def}" min="${phase.min}" max="${phase.max}"
+          style="width:60px;padding:6px 8px;border:1.5px solid var(--line);border-radius:4px;font-family:'Spline Sans',sans-serif;font-size:.95rem;background:var(--chalk);color:var(--ink)">
+        <span style="font-size:.82rem;color:var(--ink-soft)">min</span>
+      </div>
+    `;
+    phaseSetup.appendChild(div);
+  });
+
+  document.getElementById('resetSetupBtn').addEventListener('click', () => {
+    DEFAULT_PHASES.forEach((p, i) => { document.getElementById('dur' + i).value = p.def; });
+  });
+
+  document.getElementById('startBtn').addEventListener('click', startTimer);
+
+  function startTimer() {
+    durations = DEFAULT_PHASES.map((_, i) => {
+      const v = parseInt(document.getElementById('dur' + i).value, 10);
+      return isNaN(v) ? DEFAULT_PHASES[i].def : v;
+    });
+    currentPhase = 0;
+    document.getElementById('phaseSetup').closest('.section').style.display = 'none';
+    document.getElementById('timerDisplay').style.display = 'block';
+    buildPips();
+    beginPhase(0);
+  }
+
+  function buildPips() {
+    const container = document.getElementById('phasePips');
+    container.innerHTML = '';
+    DEFAULT_PHASES.forEach((phase, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'phase-pip';
+      btn.textContent = `${phase.name} (${durations[i]}m)`;
+      btn.addEventListener('click', () => jumpToPhase(i));
+      container.appendChild(btn);
+    });
+  }
+
+  function updatePips() {
+    document.querySelectorAll('.phase-pip').forEach((pip, i) => {
+      pip.classList.toggle('active', i === currentPhase);
+      pip.classList.toggle('done-pip', i < currentPhase);
+    });
+  }
+
+  function beginPhase(idx) {
+    if (idx >= DEFAULT_PHASES.length) { finishAll(); return; }
+    currentPhase = idx;
+    secondsLeft = durations[idx] * 60;
+    running = true;
+    document.getElementById('phaseName').textContent = DEFAULT_PHASES[idx].name;
+    updatePips();
+    updateClock();
+    clearInterval(timerId);
+    timerId = setInterval(tick, 1000);
+  }
+
+  function jumpToPhase(idx) {
+    clearInterval(timerId);
+    beginPhase(idx);
+  }
+
+  function tick() {
+    if (!running) return;
+    secondsLeft--;
+    if (secondsLeft <= 0) {
+      secondsLeft = 0;
+      updateClock();
+      clearInterval(timerId);
+      playBeep();
+      setTimeout(() => { if (currentPhase < DEFAULT_PHASES.length - 1) beginPhase(currentPhase + 1); else finishAll(); }, 1500);
+    } else {
+      updateClock();
+    }
+  }
+
+  function updateClock() {
+    const m = Math.floor(secondsLeft / 60);
+    const s = secondsLeft % 60;
+    const face = document.getElementById('clockFace');
+    face.textContent = `${m}:${String(s).padStart(2, '0')}`;
+    face.className = 'timer-clock';
+    if (secondsLeft === 0) face.classList.add('done');
+    else if (secondsLeft <= 60) face.classList.add('warn');
+  }
+
+  function finishAll() {
+    document.getElementById('phaseName').textContent = 'All phases complete!';
+    const face = document.getElementById('clockFace');
+    face.textContent = '✓';
+    face.className = 'timer-clock done';
+    document.querySelectorAll('.phase-pip').forEach(p => p.classList.add('done-pip'));
+  }
+
+  function playBeep() {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.value = 440;
+      osc.type = 'sine';
+      gain.gain.setValueAtTime(0.3, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.2);
+      osc.start(ctx.currentTime);
+      osc.stop(ctx.currentTime + 1.2);
+    } catch {}
+  }
+
+  document.getElementById('pauseBtn').addEventListener('click', function() {
+    running = !running;
+    this.textContent = running ? 'Pause' : 'Resume';
+    if (running) { timerId = setInterval(tick, 1000); }
+    else { clearInterval(timerId); }
+  });
+
+  document.getElementById('skipBtn').addEventListener('click', () => {
+    clearInterval(timerId);
+    beginPhase(currentPhase + 1);
+  });
+
+  document.getElementById('backToSetupBtn').addEventListener('click', () => {
+    clearInterval(timerId);
+    running = false;
+    document.getElementById('timerDisplay').style.display = 'none';
+    document.getElementById('phaseSetup').closest('.section').style.display = 'block';
+  });
+</script>
+</body>
+</html>

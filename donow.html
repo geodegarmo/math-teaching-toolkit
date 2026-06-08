@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spiral Do-Now Generator — Math Teaching Toolkit</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+<div class="overlay" id="overlay"></div>
+<nav class="sidenav" id="sidenav">
+  <div class="sidenav-brand"><a href="index.html"><div class="brand-eyebrow">NC Math 8 + Math 1</div><div class="brand-name">Math Teaching Toolkit</div></a></div>
+  <div class="nav-group"><span class="nav-group-label">Course Content</span>
+    <a class="nav-link" href="math8.html"><span class="icon">📐</span> Math 8 (EOG)</a>
+    <a class="nav-link" href="math1.html"><span class="icon">📈</span> Math 1 (EOC)</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Planning</span>
+    <a class="nav-link" href="differentiation.html"><span class="icon">🎯</span> Differentiation</a>
+    <a class="nav-link" href="pacing.html"><span class="icon">📅</span> Pacing &amp; Calendar</a>
+    <a class="nav-link" href="checklist.html"><span class="icon">✅</span> Lesson Checklist</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Classroom Tools</span>
+    <a class="nav-link" href="donow.html"><span class="icon">🔀</span> Do-Now Generator</a>
+    <a class="nav-link" href="timer.html"><span class="icon">⏱</span> Block Timer</a>
+    <a class="nav-link" href="exit-sort.html"><span class="icon">🃏</span> Exit Ticket Sorter</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Print</span>
+    <a class="nav-link" href="lesson-plan.html"><span class="icon">📄</span> Lesson Plan Template</a>
+    <a class="nav-link" href="reference-cards.html"><span class="icon">🗂</span> Student Reference Cards</a>
+  </div>
+  <div class="nav-footer">NC Standard Course of Study<br>Math 8 EOG · Math 1 EOC</div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <div class="page-eyebrow">Classroom Tool</div>
+    <h1>Spiral Do-Now <em>Generator</em></h1>
+    <p class="sub">Select four topics — one for each problem slot — and generate a ready-to-post Do-Now. Shuffle any individual problem without losing the others. Show or hide answers for your answer key.</p>
+  </div>
+
+  <div class="content">
+
+    <div class="callout tip">
+      <strong>Spiral strategy:</strong> Slot 1 = yesterday's topic · Slot 2 = last week's topic · Slots 3–4 = earlier high-weight domains. The goal is retrieval from different points in time, not just today's content.
+    </div>
+
+    <!-- SLOT SELECTORS -->
+    <div id="slotsWrap"></div>
+
+    <!-- GENERATE BUTTON -->
+    <div class="btn-group">
+      <button class="btn btn-ochre" id="generateBtn">Generate Do-Now</button>
+      <button class="btn" id="clearBtn">Clear selections</button>
+    </div>
+
+    <!-- OUTPUT -->
+    <div id="dnOutput" style="display:none">
+      <div class="donow-sheet">
+        <h3 id="dnDate">Spiral Do-Now</h3>
+        <div id="dnProblems"></div>
+      </div>
+      <div class="btn-group no-print">
+        <button class="btn" id="toggleAnswers">Show answers</button>
+        <button class="btn btn-ghost" onclick="window.print()">Print / Save PDF</button>
+      </div>
+    </div>
+
+  </div>
+  <footer>Problem bank covers 18 topics across Math 8 and Math 1. Problems are randomly selected from each topic's pool — shuffle to get a different problem from the same topic.</footer>
+</main>
+
+<script src="js/app.js"></script>
+<script src="js/problems.js"></script>
+<script>
+  // Build slot UIs
+  const slotsWrap = document.getElementById('slotsWrap');
+  const SLOTS = [
+    { label: 'Problem 1 — Yesterday\'s topic', hint: 'What did you teach last period?' },
+    { label: 'Problem 2 — Last week\'s topic', hint: 'Spaced retrieval from ~5 days ago' },
+    { label: 'Problem 3 — High-weight domain spiral', hint: 'Pick a domain that weighs heavily on the test' },
+    { label: 'Problem 4 — Earlier concept revisit', hint: 'Pick something from earlier in the year' }
+  ];
+
+  const selectedTopics = [null, null, null, null];
+  const selectedIndices = [0, 0, 0, 0];
+
+  SLOTS.forEach((slot, si) => {
+    const wrap = document.createElement('div');
+    wrap.style.cssText = 'margin-bottom:22px';
+    wrap.innerHTML = `
+      <div style="font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre-deep);margin-bottom:8px">
+        ${slot.label}
+      </div>
+      <div style="font-size:.8rem;color:var(--ink-soft);margin-bottom:8px">${slot.hint}</div>
+      <div class="donow-config" id="slot${si}"></div>
+    `;
+    slotsWrap.appendChild(wrap);
+
+    const grid = wrap.querySelector(`#slot${si}`);
+    PROBLEM_BANK.forEach((topic, ti) => {
+      const chip = document.createElement('div');
+      chip.className = 'topic-chip';
+      chip.innerHTML = `<div class="tc-name">${topic.name}</div><div class="tc-course">${topic.course} · ${topic.domain}</div>`;
+      chip.addEventListener('click', () => {
+        grid.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('sel'));
+        chip.classList.add('sel');
+        selectedTopics[si] = ti;
+        selectedIndices[si] = Math.floor(Math.random() * PROBLEM_BANK[ti].problems.length);
+      });
+      grid.appendChild(chip);
+    });
+  });
+
+  // Generate
+  document.getElementById('generateBtn').addEventListener('click', () => {
+    const problems = [];
+    for (let si = 0; si < 4; si++) {
+      const ti = selectedTopics[si];
+      if (ti === null) {
+        alert(`Please select a topic for Problem ${si + 1}.`);
+        return;
+      }
+      const topic = PROBLEM_BANK[ti];
+      const idx = selectedIndices[si];
+      problems.push({ si, ti, idx, topic, p: topic.problems[idx] });
+    }
+    renderSheet(problems);
+    document.getElementById('dnOutput').style.display = 'block';
+    document.getElementById('dnOutput').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  function renderSheet(problems) {
+    const now = new Date();
+    document.getElementById('dnDate').textContent =
+      `Spiral Do-Now — ${now.toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric' })}`;
+
+    const container = document.getElementById('dnProblems');
+    container.innerHTML = '';
+    problems.forEach(({ si, ti, idx, topic, p }) => {
+      const row = document.createElement('div');
+      row.className = 'dn-row';
+      row.innerHTML = `
+        <div class="dn-num">${si + 1}</div>
+        <div class="dn-body">
+          <div class="dn-topic">${topic.name} · ${topic.course}</div>
+          <div class="dn-q">${p.q}</div>
+          <div class="dn-ans" id="ans${si}">${p.a}</div>
+        </div>
+        <button class="dn-regen-btn" data-si="${si}" data-ti="${ti}" data-cur="${idx}">↻ New</button>
+      `;
+      container.appendChild(row);
+    });
+
+    // Wire regen buttons
+    container.querySelectorAll('.dn-regen-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const si = +btn.dataset.si;
+        const ti = +btn.dataset.ti;
+        const pool = PROBLEM_BANK[ti].problems;
+        let next = Math.floor(Math.random() * pool.length);
+        // avoid same index if pool has more than 1 problem
+        if (pool.length > 1) while (next === +btn.dataset.cur) next = Math.floor(Math.random() * pool.length);
+        btn.dataset.cur = next;
+        selectedIndices[si] = next;
+        const p = pool[next];
+        const row = btn.closest('.dn-row');
+        row.querySelector('.dn-q').textContent = p.q;
+        row.querySelector('.dn-ans').textContent = p.a;
+      });
+    });
+  }
+
+  // Toggle answers
+  let answersShown = false;
+  document.getElementById('toggleAnswers').addEventListener('click', function() {
+    answersShown = !answersShown;
+    document.querySelectorAll('.dn-ans').forEach(el => el.classList.toggle('show', answersShown));
+    this.textContent = answersShown ? 'Hide answers' : 'Show answers';
+  });
+
+  // Clear
+  document.getElementById('clearBtn').addEventListener('click', () => {
+    document.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('sel'));
+    for (let i = 0; i < 4; i++) { selectedTopics[i] = null; selectedIndices[i] = 0; }
+    document.getElementById('dnOutput').style.display = 'none';
+  });
+</script>
+</body>
+</html>
