@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources Hub — Math Teaching Toolkit</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+<div class="overlay" id="overlay"></div>
+<nav class="sidenav" id="sidenav">
+  <div class="sidenav-brand"><a href="index.html"><div class="brand-eyebrow">NC Math 8 + Math 1</div><div class="brand-name">Math Teaching Toolkit</div></a></div>
+  <div class="nav-group"><span class="nav-group-label">Course Content</span>
+    <a class="nav-link" href="math8.html"><span class="icon">📐</span> Math 8 (EOG)</a>
+    <a class="nav-link" href="math1.html"><span class="icon">📈</span> Math 1 (EOC)</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Student Materials</span>
+    <a class="nav-link" href="homework.html"><span class="icon">📝</span> Homework Practice</a>
+    <a class="nav-link" href="videos.html"><span class="icon">🎬</span> Video Library</a>
+    <a class="nav-link" href="solution-guide.html"><span class="icon">✏️</span> Solution Guide</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Planning</span>
+    <a class="nav-link" href="differentiation.html"><span class="icon">🎯</span> Differentiation</a>
+    <a class="nav-link" href="pacing.html"><span class="icon">📅</span> Pacing &amp; Calendar</a>
+    <a class="nav-link" href="checklist.html"><span class="icon">✅</span> Lesson Checklist</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Classroom Tools</span>
+    <a class="nav-link" href="donow.html"><span class="icon">🔀</span> Do-Now Generator</a>
+    <a class="nav-link" href="timer.html"><span class="icon">⏱</span> Block Timer</a>
+    <a class="nav-link" href="exit-sort.html"><span class="icon">🃏</span> Exit Ticket Sorter</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Resources</span>
+    <a class="nav-link" href="resources.html"><span class="icon">🔗</span> All Resources</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Print</span>
+    <a class="nav-link" href="lesson-plan.html"><span class="icon">📄</span> Lesson Plan Template</a>
+    <a class="nav-link" href="reference-cards.html"><span class="icon">🗂</span> Student Reference Cards</a>
+  </div>
+  <div class="nav-footer">NC Standard Course of Study<br>Math 8 EOG · Math 1 EOC</div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <div class="page-eyebrow">For Everyone</div>
+    <h1>Resources <em>Hub</em></h1>
+    <p class="sub">Curated links and tools for teachers building curriculum, students learning independently, and anyone curious about where NC Math 8 and Math 1 fit in the broader landscape of mathematics education.</p>
+  </div>
+
+  <div class="content">
+
+    <div class="audience-tabs">
+      <button class="atab active" data-tab="teachers">For Teachers</button>
+      <button class="atab" data-tab="students">For Students</button>
+      <button class="atab" data-tab="everyone">For Everyone</button>
+    </div>
+
+    <!-- ===== TAB: TEACHERS ===== -->
+    <div class="atab-panel active" id="tab-teachers">
+
+      <div class="section">
+        <div class="section-label">Curriculum &amp; Task Materials</div>
+        <div class="resource-grid">
+          <a class="resource-card" href="https://www.dpi.nc.gov/teach/nc2ml" target="_blank" rel="noopener">
+            <div class="rc-icon">📘</div>
+            <h4>NC2ML — NC Math Learning</h4>
+            <p>The NC Department of Public Instruction's primary professional learning resource for math teachers. Unpacking documents, instructional resources, and the Launch–Explore–Discuss framework this toolkit is built on.</p>
+            <div class="resource-url">dpi.nc.gov/teach/nc2ml</div>
+          </a>
+          <a class="resource-card" href="https://im.kendallhunt.com" target="_blank" rel="noopener">
+            <div class="rc-icon">📐</div>
+            <h4>Illustrative Mathematics (IM K–12)</h4>
+            <p>High-quality, freely browsable problem sets and units aligned to the standards. The gold standard for coherent, conceptual curriculum — use for task inspiration or as a full curriculum.</p>
+            <div class="resource-url">im.kendallhunt.com</div>
+          </a>
+          <a class="resource-card" href="https://www.desmos.com/activities" target="_blank" rel="noopener">
+            <div class="rc-icon">📊</div>
+            <h4>Desmos Teacher Activity Builder</h4>
+            <p>Free, browser-based graphing and interactive activities. Teacher dashboard shows student responses in real time. Essential for the Explore phase of any function unit.</p>
+            <div class="resource-url">desmos.com/activities</div>
+          </a>
+          <a class="resource-card" href="https://achievethecore.org" target="_blank" rel="noopener">
+            <div class="rc-icon">🎯</div>
+            <h4>Achieve the Core</h4>
+            <p>Free SBAC-aligned tasks, focus documents, and coherence maps showing how standards connect across grades. The coherence map is invaluable for understanding prerequisite knowledge.</p>
+            <div class="resource-url">achievethecore.org</div>
+          </a>
+          <a class="resource-card" href="https://www.nctm.org" target="_blank" rel="noopener">
+            <div class="rc-icon">🔷</div>
+            <h4>NCTM — National Council of Teachers of Mathematics</h4>
+            <p>Professional organization for math educators. Membership includes access to <em>Mathematics Teaching in the Middle School</em> and <em>The Mathematics Teacher</em> journals. Free resources in the "Resources" tab.</p>
+            <div class="resource-url">nctm.org</div>
+          </a>
+          <a class="resource-card" href="https://www.openmiddle.com" target="_blank" rel="noopener">
+            <div class="rc-icon">🔓</div>
+            <h4>Open Middle</h4>
+            <p>Problems with a "closed beginning and end but open middle" — structured for differentiation, low-floor/high-ceiling, and classroom discussion. Searchable by standard.</p>
+            <div class="resource-url">openmiddle.com</div>
+          </a>
+          <a class="resource-card" href="https://www.youcubed.org" target="_blank" rel="noopener">
+            <div class="rc-icon">🧮</div>
+            <h4>YouCubed (Jo Boaler, Stanford)</h4>
+            <p>Research-based tasks, mindset materials, and classroom norms for reducing math anxiety. The "Week of Inspirational Math" is a great start-of-year investment for any class.</p>
+            <div class="resource-url">youcubed.org</div>
+          </a>
+          <a class="resource-card" href="https://www.dpi.nc.gov/districts-schools/classroom-resources/academic-standards/standard-course-study/mathematics" target="_blank" rel="noopener">
+            <div class="rc-icon">📋</div>
+            <h4>NC Standard Course of Study — Mathematics</h4>
+            <p>The official NCDPI unpacking documents for every standard in Math 8 and Math 1. Includes clarifications, vocabulary, and example problems. Essential reference for EOG/EOC planning.</p>
+            <div class="resource-url">dpi.nc.gov</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Research &amp; Professional Reading</div>
+        <div class="resource-grid">
+          <a class="resource-card" href="https://www.retrievalpractice.org" target="_blank" rel="noopener">
+            <div class="rc-icon">🧠</div>
+            <h4>Retrieval Practice (Pooja Agarwal)</h4>
+            <p>The research behind retrieval practice — why the Spiral Do-Now works. Free guides, research summaries, and classroom implementation strategies from the leading researchers in the field.</p>
+            <div class="resource-url">retrievalpractice.org</div>
+          </a>
+          <a class="resource-card" href="https://www.amazon.com/5-Practices-Orchestrating-Productive-Mathematics/dp/0873536770" target="_blank" rel="noopener">
+            <div class="rc-icon">📚</div>
+            <h4>5 Practices for Orchestrating Discussion</h4>
+            <p>Smith &amp; Stein's foundational book on the Anticipate–Monitor–Select–Sequence–Connect framework used in the Explore phase. The single most practical PD book for math teachers.</p>
+            <div class="resource-url">Smith &amp; Stein — NCTM Press</div>
+          </a>
+          <a class="resource-card" href="https://www.amazon.com/Make-Stick-Science-Successful-Learning/dp/0674729013" target="_blank" rel="noopener">
+            <div class="rc-icon">📗</div>
+            <h4>Make It Stick (Brown, Roediger, McDaniel)</h4>
+            <p>The cognitive science behind retrieval practice, spaced practice, interleaving, and desirable difficulties. The research base for every structural decision in the Sticky Math Block.</p>
+            <div class="resource-url">Harvard University Press</div>
+          </a>
+          <a class="resource-card" href="https://www.nctm.org/Publications/Mathematics-Teaching-in-Middle-School/" target="_blank" rel="noopener">
+            <div class="rc-icon">📰</div>
+            <h4>Mathematics Teaching in the Middle School</h4>
+            <p>NCTM's peer-reviewed journal for 5–9 grade math educators. Each issue has task ideas, research in practice, and technology integration articles directly applicable to Math 8.</p>
+            <div class="resource-url">nctm.org</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Assessment &amp; Data Tools</div>
+        <div class="resource-grid">
+          <a class="resource-card" href="https://www.dpi.nc.gov/districts-schools/testing-and-school-accountability/eog-eoc-tests" target="_blank" rel="noopener">
+            <div class="rc-icon">📝</div>
+            <h4>NC EOG &amp; EOC Test Information</h4>
+            <p>Released tests, scoring guides, test specifications, and performance level descriptors for Math 8 EOG and Math 1 EOC. Bookmark this — it's the authoritative source for what will and won't appear on the test.</p>
+            <div class="resource-url">dpi.nc.gov</div>
+          </a>
+          <a class="resource-card" href="https://www.desmos.com/scientific" target="_blank" rel="noopener">
+            <div class="rc-icon">🔢</div>
+            <h4>Desmos Four-Function &amp; Scientific Calculator</h4>
+            <p>The exact calculators available on NC EOG and EOC tests. Practice using the test-provided calculator instead of a physical TI so students are fluent on test day.</p>
+            <div class="resource-url">desmos.com/scientific</div>
+          </a>
+          <a class="resource-card" href="https://forms.google.com" target="_blank" rel="noopener">
+            <div class="rc-icon">📊</div>
+            <h4>Google Forms (Exit Ticket Data)</h4>
+            <p>Pair with the Exit Ticket Sorter on this site: use Google Forms to collect digital exit tickets, then sort in the tool here. Responses auto-build a spreadsheet for tracking by student and concept.</p>
+            <div class="resource-url">forms.google.com</div>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /tab-teachers -->
+
+    <!-- ===== TAB: STUDENTS ===== -->
+    <div class="atab-panel" id="tab-students">
+
+      <div class="section">
+        <div class="section-label">Practice &amp; Learning</div>
+        <div class="resource-grid">
+          <a class="resource-card" href="https://www.khanacademy.org/math/cc-eighth-grade-math" target="_blank" rel="noopener">
+            <div class="rc-icon">📐</div>
+            <h4>Khan Academy — Math 8</h4>
+            <p>Free, complete Math 8 course with video explanations, practice problems, and mastery tracking. If you missed a lesson or need extra help, start here. Your teacher may be able to assign specific exercises.</p>
+            <div class="resource-url">khanacademy.org</div>
+          </a>
+          <a class="resource-card" href="https://www.khanacademy.org/math/algebra" target="_blank" rel="noopener">
+            <div class="rc-icon">📈</div>
+            <h4>Khan Academy — Algebra 1 (Math 1)</h4>
+            <p>Free Algebra 1 course covering linear, quadratic, and exponential functions — the core of Math 1. Use the mastery tracker to see which topics need more work.</p>
+            <div class="resource-url">khanacademy.org</div>
+          </a>
+          <a class="resource-card" href="https://www.desmos.com/calculator" target="_blank" rel="noopener">
+            <div class="rc-icon">📊</div>
+            <h4>Desmos Graphing Calculator</h4>
+            <p>Free, powerful graphing calculator that works in any browser. Type any equation and see its graph instantly. Perfect for exploring transformations, systems, function families, and verifying your homework.</p>
+            <div class="resource-url">desmos.com/calculator</div>
+          </a>
+          <a class="resource-card" href="https://www.wolframalpha.com" target="_blank" rel="noopener">
+            <div class="rc-icon">🔍</div>
+            <h4>Wolfram Alpha</h4>
+            <p>Shows step-by-step solutions to algebra, geometry, and statistics problems — and explains each step. Use it to check your work and understand where you went wrong, not to avoid doing the work.</p>
+            <div class="resource-url">wolframalpha.com</div>
+          </a>
+          <a class="resource-card" href="https://www.ixl.com/math/grade-8" target="_blank" rel="noopener">
+            <div class="rc-icon">💯</div>
+            <h4>IXL Math — Grade 8</h4>
+            <p>Adaptive practice problems that adjust to your level. Free for limited daily practice. Gives targeted feedback and tracks which skills need work. Good for test prep and filling in gaps.</p>
+            <div class="resource-url">ixl.com</div>
+          </a>
+          <a class="resource-card" href="https://quizlet.com/subject/math" target="_blank" rel="noopener">
+            <div class="rc-icon">🃏</div>
+            <h4>Quizlet — Math Vocabulary</h4>
+            <p>Flashcard sets for math vocabulary and formulas. Search "NC Math 8" or "Algebra 1 vocabulary" to find community-made sets. Vocabulary is tested explicitly on NC EOG and EOC.</p>
+            <div class="resource-url">quizlet.com</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Enrichment &amp; Competition Math</div>
+        <div class="resource-grid">
+          <a class="resource-card" href="https://artofproblemsolving.com" target="_blank" rel="noopener">
+            <div class="rc-icon">🏆</div>
+            <h4>Art of Problem Solving (AoPS)</h4>
+            <p>The community for students who want to go deep — beyond the curriculum. AMC preparation, competition math courses, and an active forum where hard problems get discussed seriously.</p>
+            <div class="resource-url">artofproblemsolving.com</div>
+          </a>
+          <a class="resource-card" href="https://www.mathcounts.org" target="_blank" rel="noopener">
+            <div class="rc-icon">🔢</div>
+            <h4>MATHCOUNTS</h4>
+            <p>Middle school math competition program. Problem sets are free to download — Sprint, Target, and Team rounds. Even if you don't compete, working MATHCOUNTS problems builds deep problem-solving skills.</p>
+            <div class="resource-url">mathcounts.org</div>
+          </a>
+          <a class="resource-card" href="https://maa.org/math-competitions/amc-8" target="_blank" rel="noopener">
+            <div class="rc-icon">🥇</div>
+            <h4>AMC 8 — Past Problems</h4>
+            <p>The AMC 8 is a 25-question competition for students in grade 8 and below. Past tests with solutions are free. AMC problems are a gold-standard source of rich, non-routine problems at exactly the Math 8 level.</p>
+            <div class="resource-url">maa.org</div>
+          </a>
+          <a class="resource-card" href="https://www.youcubed.org/tasks" target="_blank" rel="noopener">
+            <div class="rc-icon">🧩</div>
+            <h4>YouCubed Tasks</h4>
+            <p>Open tasks designed by Jo Boaler's Stanford team to be low-floor, high-ceiling, and genuinely interesting. Sorted by grade band. Great for math club or challenge work.</p>
+            <div class="resource-url">youcubed.org</div>
+          </a>
+          <a class="resource-card" href="https://nrich.maths.org" target="_blank" rel="noopener">
+            <div class="rc-icon">🔮</div>
+            <h4>NRICH Mathematics</h4>
+            <p>University of Cambridge's collection of enrichment problems and investigations. Sorted by topic and difficulty. Problems are genuinely novel — you won't find them in a textbook.</p>
+            <div class="resource-url">nrich.maths.org</div>
+          </a>
+          <a class="resource-card" href="https://brilliant.org" target="_blank" rel="noopener">
+            <div class="rc-icon">💡</div>
+            <h4>Brilliant.org</h4>
+            <p>Interactive problem sets and courses in math, logic, and science. Some free content; paid subscription for full access. Better than Khan Academy for students who want to be challenged.</p>
+            <div class="resource-url">brilliant.org</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Careers That Use This Math</div>
+        <div class="card">
+          <p style="font-size:.88rem;margin-bottom:14px">Every skill in Math 8 and Math 1 is directly used in real careers. Here's where the curriculum shows up in the real world:</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div class="ex"><b>Linear equations &amp; slope:</b> Civil engineers calculate road grades, economists model supply and demand, data scientists build trend lines.</div>
+            <div class="ex"><b>Exponential functions:</b> Epidemiologists model disease spread, finance professionals calculate compound interest, biologists study population growth.</div>
+            <div class="ex"><b>Pythagorean theorem:</b> Architects, carpenters, surveyors, and GPS systems all use distance in the coordinate plane.</div>
+            <div class="ex"><b>Statistics &amp; regression:</b> Sports analysts, medical researchers, social scientists, and machine learning engineers work with correlation and regression every day.</div>
+            <div class="ex"><b>Quadratics:</b> Physicists model projectile motion, game designers program realistic physics, engineers design parabolic bridges and satellite dishes.</div>
+            <div class="ex"><b>Transformations:</b> Computer graphics engineers, animators, and robotics programmers use rotation, translation, and reflection matrices constantly.</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /tab-students -->
+
+    <!-- ===== TAB: EVERYONE ===== -->
+    <div class="atab-panel" id="tab-everyone">
+
+      <div class="section">
+        <div class="section-label">About This Toolkit</div>
+        <div class="card">
+          <h3>What This Is</h3>
+          <p>The Math Teaching Toolkit is a free, open-source web application built for NC Math 8 and Math 1 teachers. It contains deep content guides, interactive classroom tools, printable materials, student-facing practice, and curated resources — all in one place, with no login required.</p>
+          <p style="margin-top:10px">It is not a curriculum. It is a layer of structure and tooling on top of whatever curriculum your school uses — designed around three real problems teachers face: retention (making content stick), differentiation (reaching mixed-ability classrooms), and pacing (finishing on time).</p>
+          <div class="btn-group" style="margin-top:14px">
+            <a class="btn btn-ochre" href="index.html">Start on the Home Page →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">The Pedagogical Framework</div>
+        <div class="resource-grid">
+          <a class="resource-card" href="https://www.dpi.nc.gov/teach/nc2ml" target="_blank" rel="noopener">
+            <div class="rc-icon">🔄</div>
+            <h4>NC2ML — Launch–Explore–Discuss</h4>
+            <p>The "Sticky Math Block" in this toolkit is the NC2ML Launch–Explore–Discuss model with retrieval practice (Spiral Do-Now) and formative assessment (Exit Ticket) added. Developed by NC DPI for alignment to state standards.</p>
+            <div class="resource-url">dpi.nc.gov/teach/nc2ml</div>
+          </a>
+          <a class="resource-card" href="https://www.retrievalpractice.org/strategies" target="_blank" rel="noopener">
+            <div class="rc-icon">🧠</div>
+            <h4>Retrieval Practice &amp; Spaced Practice</h4>
+            <p>The Spiral Do-Now is built on retrieval practice research — recalling information from memory is more effective for long-term retention than re-reading or re-studying. Free research summary available here.</p>
+            <div class="resource-url">retrievalpractice.org</div>
+          </a>
+          <a class="resource-card" href="https://www.nctm.org/Publications/Books/Products/5-Practices-for-Orchestrating-Productive-Mathematics-Discussions,-2nd-Ed-(Product-)" target="_blank" rel="noopener">
+            <div class="rc-icon">💬</div>
+            <h4>5 Practices for Orchestrating Discussion</h4>
+            <p>Smith &amp; Stein's framework for productive mathematical discussion: Anticipate, Monitor, Select, Sequence, Connect. The Explore phase and lesson plan template in this toolkit are built around this model.</p>
+            <div class="resource-url">nctm.org</div>
+          </a>
+          <a class="resource-card" href="https://www.iste.org/explore/education/what-is-cra" target="_blank" rel="noopener">
+            <div class="rc-icon">🔢</div>
+            <h4>Concrete–Representational–Abstract (CRA)</h4>
+            <p>The instructional sequence used throughout the Math 8 and Math 1 content pages — starting with physical/concrete models, moving to pictures, then to abstract notation. Especially effective for algebra concepts.</p>
+            <div class="resource-url">iste.org</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Official NC Resources</div>
+        <div class="resource-grid">
+          <a class="resource-card" href="https://www.dpi.nc.gov/districts-schools/classroom-resources/academic-standards/standard-course-study/mathematics" target="_blank" rel="noopener">
+            <div class="rc-icon">📋</div>
+            <h4>NC Standard Course of Study — Math</h4>
+            <p>The official state standards for all K–12 mathematics, including unpacking documents for Math 8 and Math 1. The authoritative source for what students are expected to know and do.</p>
+            <div class="resource-url">dpi.nc.gov</div>
+          </a>
+          <a class="resource-card" href="https://www.dpi.nc.gov/districts-schools/testing-and-school-accountability/eog-eoc-tests" target="_blank" rel="noopener">
+            <div class="rc-icon">📝</div>
+            <h4>NC EOG &amp; EOC Test Specifications</h4>
+            <p>Released test items, test blueprints (which domains are weighted most heavily), and performance level descriptors. Essential reading for understanding the gap between daily teaching and what the test measures.</p>
+            <div class="resource-url">dpi.nc.gov</div>
+          </a>
+          <a class="resource-card" href="https://www.ncpublicschools.gov" target="_blank" rel="noopener">
+            <div class="rc-icon">🏫</div>
+            <h4>NC Public Schools</h4>
+            <p>North Carolina Department of Public Instruction homepage. District and school data, accountability reports, policy, and statewide math initiatives.</p>
+            <div class="resource-url">ncpublicschools.gov</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">How to Use This Toolkit</div>
+        <div class="card">
+          <div style="counter-reset:step">
+            <div class="step">
+              <div class="step-title">If you're a teacher getting started</div>
+              <p>Read the <a href="index.html">home page</a> for the Sticky Math Block overview, then go to your course (Math 8 or Math 1) for domain-by-domain strategies. Use the <a href="lesson-plan.html">Lesson Plan Template</a> for planning and the <a href="timer.html">Block Timer</a> to run the structure live in class.</p>
+            </div>
+            <div class="step">
+              <div class="step-title">If you're a student</div>
+              <p>Start with <a href="homework.html">Homework Practice</a> for domain-organized problem sets and instant answer-checking. Use the <a href="reference-cards.html">Reference Cards</a> as a study guide. The <a href="videos.html">Video Library</a> has concept explanations for every major topic.</p>
+            </div>
+            <div class="step">
+              <div class="step-title">If you're a parent or guardian</div>
+              <p>The <a href="homework.html">Homework Practice</a> page shows the problems your student is working on with full answers. The <a href="reference-cards.html">Reference Cards</a> give you the key formulas. The <a href="videos.html">Video Library</a> has Khan Academy links for every topic.</p>
+            </div>
+            <div class="step">
+              <div class="step-title">If you're an educator from outside NC</div>
+              <p>The NC Standard Course of Study is closely aligned to CCSS. Most content, strategies, and tools on this site apply directly to any 8th grade and Algebra 1 classroom. NC-specific standard codes are listed on every resource — match them to your state's standards as needed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /tab-everyone -->
+
+  </div>
+  <footer>Resource links are curated for quality and relevance. External sites are not affiliated with or endorsed by this toolkit. NC standard codes and EOG/EOC references reflect the current NC Standard Course of Study — verify against current NCDPI documents for the most up-to-date specifications. This toolkit is open and free to use by anyone.</footer>
+</main>
+
+<script src="js/app.js"></script>
+<script>
+  document.querySelectorAll('.atab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.atab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.atab-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homework Practice — Math Teaching Toolkit</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+<div class="overlay" id="overlay"></div>
+<nav class="sidenav" id="sidenav">
+  <div class="sidenav-brand"><a href="index.html"><div class="brand-eyebrow">NC Math 8 + Math 1</div><div class="brand-name">Math Teaching Toolkit</div></a></div>
+  <div class="nav-group"><span class="nav-group-label">Course Content</span>
+    <a class="nav-link" href="math8.html"><span class="icon">📐</span> Math 8 (EOG)</a>
+    <a class="nav-link" href="math1.html"><span class="icon">📈</span> Math 1 (EOC)</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Student Materials</span>
+    <a class="nav-link" href="homework.html"><span class="icon">📝</span> Homework Practice</a>
+    <a class="nav-link" href="videos.html"><span class="icon">🎬</span> Video Library</a>
+    <a class="nav-link" href="solution-guide.html"><span class="icon">✏️</span> Solution Guide</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Planning</span>
+    <a class="nav-link" href="differentiation.html"><span class="icon">🎯</span> Differentiation</a>
+    <a class="nav-link" href="pacing.html"><span class="icon">📅</span> Pacing &amp; Calendar</a>
+    <a class="nav-link" href="checklist.html"><span class="icon">✅</span> Lesson Checklist</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Classroom Tools</span>
+    <a class="nav-link" href="donow.html"><span class="icon">🔀</span> Do-Now Generator</a>
+    <a class="nav-link" href="timer.html"><span class="icon">⏱</span> Block Timer</a>
+    <a class="nav-link" href="exit-sort.html"><span class="icon">🃏</span> Exit Ticket Sorter</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Resources</span>
+    <a class="nav-link" href="resources.html"><span class="icon">🔗</span> All Resources</a>
+  </div>
+  <div class="nav-group"><span class="nav-group-label">Print</span>
+    <a class="nav-link" href="lesson-plan.html"><span class="icon">📄</span> Lesson Plan Template</a>
+    <a class="nav-link" href="reference-cards.html"><span class="icon">🗂</span> Student Reference Cards</a>
+  </div>
+  <div class="nav-footer">NC Standard Course of Study<br>Math 8 EOG · Math 1 EOC</div>
+</nav>
+
+<main>
+  <div class="page-header">
+    <div class="page-eyebrow">Student Materials</div>
+    <h1>Homework <em>Practice</em></h1>
+    <p class="sub">Domain-by-domain practice sets aligned to EOG and EOC standards. Check your answers inline or print for pencil-and-paper work. Progress saves to this browser.</p>
+    <div class="btn-group">
+      <button class="btn btn-ochre no-print" onclick="window.print()">Print / Save PDF</button>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="course-toggle no-print">
+      <button class="ctab active" data-course="math8">Math 8 — EOG</button>
+      <button class="ctab" data-course="math1">Math 1 — EOC</button>
+    </div>
+
+    <!-- ===== MATH 8 ===== -->
+    <div class="hw-course-panel active" id="panel-math8">
+
+      <!-- SET 1: Expressions & Equations -->
+      <div class="hw-set">
+        <div class="hw-set-header">
+          <div class="std-badge">NC.8.EE.1–8</div>
+          <h3>Set 1 — Expressions &amp; Equations</h3>
+          <button class="hw-set-toggle" aria-label="Expand">▼</button>
+        </div>
+        <div class="hw-set-body">
+          <div class="hw-problem">
+            <div class="hw-pnum">1</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Simplify: (x³)² · x⁴</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">x¹⁰ — use the power rule first: (x³)² = x⁶, then product rule: x⁶ · x⁴ = x¹⁰</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-ee-1">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">2</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Write 0.000056 in scientific notation.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">5.6 × 10⁻⁵ — count 5 places left to put the decimal after the 5</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-ee-2">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">3</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Solve: 4x + 7 = 31</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">x = 6 — subtract 7: 4x = 24; divide by 4</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-ee-3">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">4</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Solve: 3(2x − 1) = x + 12</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">x = 3 — distribute: 6x − 3 = x + 12; subtract x: 5x = 15; x = 3</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-ee-4">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">5</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Solve: x/4 − 2 = 6</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">x = 32 — add 2: x/4 = 8; multiply by 4</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-ee-5">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">6</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Solve the system: y = 2x + 1 and y = −x + 7</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">(2, 5) — set equal: 2x + 1 = −x + 7; 3x = 6; x = 2; y = 5</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-ee-6">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">7</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Calculate: (3 × 10⁴) × (2 × 10³). Write in proper scientific notation.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">6 × 10⁷ — multiply coefficients: 3 × 2 = 6; add exponents: 4 + 3 = 7</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-ee-7">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">8</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">Solve: 2(x + 3) − 5 = 2x + 1. Classify as one solution, no solution, or infinitely many solutions. Explain why.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">No solution — distribute: 2x + 6 − 5 = 2x + 1 → 2x + 1 = 2x + 1 → 0 = 0. Wait — that's infinitely many! Both sides simplify to 2x + 1 = 2x + 1, which is always true. Infinitely many solutions.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-ee-8">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">9</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">Two numbers have a sum of 100. One is 4 times the other. Write and solve a system of equations to find both numbers.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">20 and 80 — let x + y = 100 and y = 4x; substitute: x + 4x = 100; 5x = 100; x = 20, y = 80</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-ee-9">
+          </div>
+          <div class="hw-set-footer">
+            <button class="btn btn-ghost hw-show-ans">Show Answers</button>
+            <span style="font-size:.78rem;color:var(--ink-soft)">Checked boxes save to this browser</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SET 2: Functions -->
+      <div class="hw-set">
+        <div class="hw-set-header">
+          <div class="std-badge">NC.8.F.1–5</div>
+          <h3>Set 2 — Functions</h3>
+          <button class="hw-set-toggle" aria-label="Expand">▼</button>
+        </div>
+        <div class="hw-set-body">
+          <div class="hw-problem">
+            <div class="hw-pnum">1</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Does this mapping show a function? Input: {1, 2, 3}, Output: {1→5, 2→7, 2→9, 3→11}. Explain.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">No — input 2 maps to two different outputs (7 and 9). A function must have exactly one output per input.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-f-1">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">2</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">A table shows x: 0, 1, 2, 3 and y: 3, 7, 11, 15. Find the rate of change and write an equation.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Rate of change = 4 (y increases by 4 each time x increases by 1); equation: y = 4x + 3</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-f-2">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">3</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Write the equation of a line with slope −3 and y-intercept 7.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">y = −3x + 7</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-f-3">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">4</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">A line passes through (0, −2) and (5, 8). Find the slope and write the equation.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">m = (8−(−2))/(5−0) = 10/5 = 2; equation: y = 2x − 2</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-f-4">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">5</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Classify the slope: a road drops 4 feet for every 100 feet of horizontal distance. Positive, negative, zero, or undefined?</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Negative — the road falls as horizontal distance increases</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-f-5">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">6</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">For f(x) = 5x − 3, evaluate f(0), f(2), and f(−1).</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">f(0) = −3; f(2) = 7; f(−1) = −8</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-f-6">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">7</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">Compare f(x) = 4x + 1 (equation) to g(x) shown in the table: x: 0→3, 1→7, 2→11. Which function has the greater y-intercept? Which has the greater rate of change?</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">f has y-intercept 1; g has y-intercept 3. g has greater y-intercept. Rate of change: f has slope 4; g has slope 4 (7−3=4 per step). Equal rates of change — both slope 4.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-f-7">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">8</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">A linear function passes through (2, 9) and (6, 17). Write the equation. Then find the x-intercept.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">m = (17−9)/(6−2) = 8/4 = 2; using (2,9): 9 = 2(2)+b → b = 5; y = 2x + 5. x-intercept: 0 = 2x+5 → x = −2.5</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-f-8">
+          </div>
+          <div class="hw-set-footer">
+            <button class="btn btn-ghost hw-show-ans">Show Answers</button>
+            <span style="font-size:.78rem;color:var(--ink-soft)">Checked boxes save to this browser</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SET 3: Geometry -->
+      <div class="hw-set">
+        <div class="hw-set-header">
+          <div class="std-badge">NC.8.G.1–9</div>
+          <h3>Set 3 — Geometry</h3>
+          <button class="hw-set-toggle" aria-label="Expand">▼</button>
+        </div>
+        <div class="hw-set-body">
+          <div class="hw-problem">
+            <div class="hw-pnum">1</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">A right triangle has legs of 6 cm and 8 cm. Find the hypotenuse.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">10 cm — a² + b² = c²; 36 + 64 = 100; c = √100 = 10</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-g-1">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">2</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Point A(3, −1) is reflected over the x-axis. What are the new coordinates?</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">A'(3, 1) — reflecting over x-axis negates the y-coordinate: (x, −y)</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-g-2">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">3</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Translate point B(−2, 4) by (h, k) = (5, −3). Find B'.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">B'(3, 1) — add h to x: −2+5=3; add k to y: 4+(−3)=1</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-g-3">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">4</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Rotate point C(2, 5) 90° counterclockwise about the origin.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">C'(−5, 2) — rule for 90° CCW: (x, y) → (−y, x)</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-g-4">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">5</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Do the sides 7, 24, 25 form a right triangle? Show your check.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Yes — 7² + 24² = 49 + 576 = 625 = 25². The equation a² + b² = c² holds.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-g-5">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">6</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Find the volume of a cone with radius 6 cm and height 9 cm. Leave answer in terms of π.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">108π cm³ — V = ⅓πr²h = ⅓π(36)(9) = 108π</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-g-6">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">7</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">A dilation with scale factor k = 2 is applied to a triangle with area 15 cm². What is the area of the image?</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">60 cm² — dilation by k scales lengths by k and area by k²; 15 × 4 = 60</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-g-7">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">8</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">Find the distance between points P(1, 2) and Q(7, 10). Round to the nearest tenth.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">10 — d = √((7−1)² + (10−2)²) = √(36+64) = √100 = 10</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-g-8">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">9</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">A sphere has a volume of 288π cm³. Find its radius.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">r = 6 cm — V = ⁴⁄₃πr³; 288π = ⁴⁄₃πr³; r³ = 216; r = 6</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-g-9">
+          </div>
+          <div class="hw-set-footer">
+            <button class="btn btn-ghost hw-show-ans">Show Answers</button>
+            <span style="font-size:.78rem;color:var(--ink-soft)">Checked boxes save to this browser</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SET 4: Statistics -->
+      <div class="hw-set">
+        <div class="hw-set-header">
+          <div class="std-badge">NC.8.SP.1–4</div>
+          <h3>Set 4 — Statistics &amp; Data</h3>
+          <button class="hw-set-toggle" aria-label="Expand">▼</button>
+        </div>
+        <div class="hw-set-body">
+          <div class="hw-problem">
+            <div class="hw-pnum">1</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">A scatter plot shows that as hours of studying increase, test scores increase. Describe the association (direction and strength).</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Positive association — as x (hours) increases, y (scores) increases. Strength depends on how tightly clustered the points are around the trend line.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-sp-1">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">2</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">The correlation coefficient r = −0.87. Describe the association.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Strong negative association — r is close to −1, meaning as x increases, y decreases, and the relationship is fairly linear and tight</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-sp-2">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">3</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">A line of best fit is ŷ = 3x + 12. Predict the y-value when x = 8.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">36 — ŷ = 3(8) + 12 = 24 + 12 = 36</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-sp-3">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">4</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">A two-way table: 40 total students; 25 prefer pizza, 15 prefer tacos; 18 of the pizza-preferrers are in 8th grade. What fraction of pizza-preferrers are in 8th grade?</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">18/25 = 0.72 or 72%</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-sp-4">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">5</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Explain in one sentence the difference between correlation and causation. Give an example of each.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Correlation means two variables are related; causation means one directly causes the other. Example: Ice cream sales and drowning rates are correlated (both rise in summer) but ice cream does not cause drowning.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-sp-5">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">6</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Identify any outliers and describe their effect on the line of best fit: data cluster around (2,5) to (10,30), but one point is at (2, 95).</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">The point (2, 95) is an outlier. It would pull the line of best fit upward and reduce the slope, making predictions less accurate for the rest of the data.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-sp-6">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">7</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">The line of best fit for a study on exercise (hours/week) and resting heart rate (bpm) is ŷ = −2.5x + 80. Interpret the slope and y-intercept in context.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Slope: for each additional hour of exercise per week, resting heart rate decreases by about 2.5 bpm on average. Y-intercept: a person who exercises 0 hours/week has a predicted resting heart rate of 80 bpm.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m8-sp-7">
+          </div>
+          <div class="hw-set-footer">
+            <button class="btn btn-ghost hw-show-ans">Show Answers</button>
+            <span style="font-size:.78rem;color:var(--ink-soft)">Checked boxes save to this browser</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /panel-math8 -->
+
+    <!-- ===== MATH 1 ===== -->
+    <div class="hw-course-panel" id="panel-math1">
+
+      <!-- SET 1: Algebra – Linear & Systems -->
+      <div class="hw-set">
+        <div class="hw-set-header">
+          <div class="std-badge">NC.M1.A-SSE · A-CED · A-REI</div>
+          <h3>Set 1 — Linear Algebra &amp; Systems</h3>
+          <button class="hw-set-toggle" aria-label="Expand">▼</button>
+        </div>
+        <div class="hw-set-body">
+          <div class="hw-problem">
+            <div class="hw-pnum">1</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Solve: 5x − 2 = 3x + 8</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">x = 5 — subtract 3x: 2x − 2 = 8; add 2: 2x = 10; x = 5</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-al-1">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">2</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Solve: 2(y + 4) − 3 = 5y − 1</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">y = 2 — distribute: 2y + 8 − 3 = 5y − 1; 2y + 5 = 5y − 1; 6 = 3y; y = 2</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-al-2">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">3</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Solve the system: 2x + y = 7 and x − y = 2</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">(3, 1) — add the equations: 3x = 9; x = 3; substitute: 3 − y = 2; y = 1</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-al-3">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">4</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Simplify: 4x² − 3x + 2x² + 7x − 5</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">6x² + 4x − 5 — combine like terms: (4+2)x² + (−3+7)x − 5</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-al-4">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">5</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Factor: x² + 5x + 6</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">(x + 2)(x + 3) — find two numbers that multiply to 6 and add to 5: 2 and 3</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-al-5">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">6</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Write and solve an inequality: "A number decreased by 4 is at most 11." Graph the solution set.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">x − 4 ≤ 11; x ≤ 15. Graph: closed circle at 15, shaded to the left.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-al-6">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">7</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">Solve by elimination: 3x + 2y = 16 and x − 2y = 0. Then verify your solution.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">(4, 2) — add equations: 4x = 16; x = 4; substitute: 4 − 2y = 0; y = 2. Check: 3(4)+2(2) = 16 ✓; 4−2(2) = 0 ✓</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-al-7">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">8</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">The sum of two numbers is 45. The larger number is 9 more than twice the smaller. Find both numbers.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">12 and 33 — let s = smaller; s + (2s + 9) = 45; 3s = 36; s = 12; larger = 33. Check: 12 + 33 = 45 ✓; 33 = 2(12)+9 ✓</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-al-8">
+          </div>
+          <div class="hw-set-footer">
+            <button class="btn btn-ghost hw-show-ans">Show Answers</button>
+            <span style="font-size:.78rem;color:var(--ink-soft)">Checked boxes save to this browser</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SET 2: Quadratics -->
+      <div class="hw-set">
+        <div class="hw-set-header">
+          <div class="std-badge">NC.M1.A-SSE · A-REI · F-IF</div>
+          <h3>Set 2 — Quadratics</h3>
+          <button class="hw-set-toggle" aria-label="Expand">▼</button>
+        </div>
+        <div class="hw-set-body">
+          <div class="hw-problem">
+            <div class="hw-pnum">1</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Solve by factoring: x² − 7x + 12 = 0</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">x = 3 or x = 4 — factor: (x−3)(x−4) = 0; set each factor to zero</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-q-1">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">2</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Use the quadratic formula to solve: 2x² + 3x − 2 = 0</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">x = ½ or x = −2 — formula: x = (−3 ± √(9+16))/4 = (−3 ± 5)/4</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-q-2">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">3</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Find the vertex of y = x² − 6x + 5.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">(3, −4) — axis of symmetry x = −b/2a = 6/2 = 3; y(3) = 9 − 18 + 5 = −4</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-q-3">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">4</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Does y = −3x² + 4x − 1 open up or down? Does it have a maximum or minimum?</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Opens down (a = −3 &lt; 0); has a maximum value at the vertex</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-q-4">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">5</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Expand and simplify: (x + 5)(x − 3)</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">x² + 2x − 15 — FOIL: x² − 3x + 5x − 15</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-q-5">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">6</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Factor completely: 2x² − 8</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">2(x+2)(x−2) — factor out GCF 2: 2(x²−4); difference of squares: 2(x+2)(x−2)</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-q-6">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">7</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">The height of a ball (in feet) is h(t) = −16t² + 48t + 4. At what time(s) does the ball reach a height of 40 feet?</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Set −16t² + 48t + 4 = 40 → −16t² + 48t − 36 = 0 → 4t² − 12t + 9 = 0 → (2t−3)² = 0 → t = 1.5 sec (once, at the vertex)</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-q-7">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">8</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">Write a quadratic in vertex form with vertex (2, −5) that opens upward. Then convert it to standard form.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Vertex form: y = (x−2)² − 5; standard form: y = x² − 4x + 4 − 5 = x² − 4x − 1</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-q-8">
+          </div>
+          <div class="hw-set-footer">
+            <button class="btn btn-ghost hw-show-ans">Show Answers</button>
+            <span style="font-size:.78rem;color:var(--ink-soft)">Checked boxes save to this browser</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SET 3: Function Families -->
+      <div class="hw-set">
+        <div class="hw-set-header">
+          <div class="std-badge">NC.M1.F-IF · F-LE</div>
+          <h3>Set 3 — Function Families</h3>
+          <button class="hw-set-toggle" aria-label="Expand">▼</button>
+        </div>
+        <div class="hw-set-body">
+          <div class="hw-problem">
+            <div class="hw-pnum">1</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Identify the function family: x: 0, 1, 2, 3 | y: 1, 3, 9, 27. Write the equation.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Exponential — each y-value is multiplied by 3; equation: y = 1 · 3ˣ = 3ˣ</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-ff-1">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">2</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">A linear function has f(0) = 6 and f(3) = 15. Write the equation.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">y = 3x + 6 — slope = (15−6)/(3−0) = 3; y-intercept = f(0) = 6</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-ff-2">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">3</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">A population starts at 2,000 and grows 5% per year. Write the exponential function for the population P after t years.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">P(t) = 2000(1.05)ᵗ — general form f(t) = a · bᵗ; a = 2000 (initial); b = 1 + 0.05 = 1.05 (growth factor)</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-ff-3">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">4</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">The second differences of a sequence are constant at 4. What function family does it belong to?</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Quadratic — constant first differences → linear; constant second differences → quadratic</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-ff-4">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">5</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">A car depreciates 12% per year. It was worth $25,000 new. Write the function and find its value after 4 years.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">V(t) = 25000(0.88)ᵗ — b = 1 − 0.12 = 0.88 (decay); V(4) = 25000(0.88)⁴ ≈ $14,956</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-ff-5">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">6</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">For f(x) = 3x² − 12x + 7, find the axis of symmetry and the vertex.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Axis of symmetry: x = −(−12)/(2·3) = 2; vertex: f(2) = 12 − 24 + 7 = −5; vertex = (2, −5)</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-ff-6">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">7</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">A table shows: x: 0→5, 1→6, 2→7.2, 3→8.64. Identify the family, write the equation, and find the y-value when x = 5 (round to nearest hundredth).</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Exponential — ratio: 6/5 = 1.2 each time. Equation: y = 5(1.2)ˣ. At x = 5: y = 5(1.2)⁵ = 5(2.48832) ≈ 12.44</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-ff-7">
+          </div>
+          <div class="hw-set-footer">
+            <button class="btn btn-ghost hw-show-ans">Show Answers</button>
+            <span style="font-size:.78rem;color:var(--ink-soft)">Checked boxes save to this browser</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SET 4: Statistics -->
+      <div class="hw-set">
+        <div class="hw-set-header">
+          <div class="std-badge">NC.M1.S-ID</div>
+          <h3>Set 4 — Statistics &amp; Data Analysis</h3>
+          <button class="hw-set-toggle" aria-label="Expand">▼</button>
+        </div>
+        <div class="hw-set-body">
+          <div class="hw-problem">
+            <div class="hw-pnum">1</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">The correlation coefficient r = 0.93. Describe what this means about the relationship between two variables.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Strong positive linear association — as one variable increases, the other tends to increase, and the data points cluster closely around the line of best fit</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-st-1">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">2</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">Data set: 12, 14, 15, 16, 17, 18, 80. Find the mean and median. Which better describes the center? Why?</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Mean = (12+14+15+16+17+18+80)/7 = 172/7 ≈ 24.6; Median = 16. Median better describes center — the outlier (80) inflates the mean significantly.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-st-2">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">3</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">The LSRL for a data set is ŷ = 4.5x + 22. Predict y when x = 6.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">49 — ŷ = 4.5(6) + 22 = 27 + 22 = 49</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-st-3">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">4</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">r² = 0.74 for a study on hours of sleep (x) and reaction time (y). What does this mean?</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">74% of the variation in reaction time is explained by the linear relationship with hours of sleep. The remaining 26% is due to other factors.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-st-4">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">5</div>
+            <div class="hw-pbody">
+              <span class="hw-diff core">Core</span>
+              <div class="hw-q">A box plot shows: min = 10, Q1 = 18, median = 25, Q3 = 34, max = 50. Calculate the IQR and identify any possible outliers.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">IQR = Q3 − Q1 = 34 − 18 = 16. Outlier fence: Q3 + 1.5(16) = 58; Q1 − 1.5(16) = −6. No data is outside [−6, 58], so no outliers.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-st-5">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">6</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">A study finds r = −0.85 between screen time (hours/day) and GPA. A student claims "phones cause bad grades." Is this a valid conclusion? Explain.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Not necessarily — r = −0.85 shows strong negative correlation but not causation. There may be lurking variables (e.g., students with more screen time may also study less, sleep less, etc.). Correlation does not imply causation.</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-st-6">
+          </div>
+          <div class="hw-problem">
+            <div class="hw-pnum">7</div>
+            <div class="hw-pbody">
+              <span class="hw-diff challenge">Challenge</span>
+              <div class="hw-q">The LSRL for exercise (hours/week) and resting heart rate (bpm) is ŷ = −3.1x + 82. Interpret the slope and predict the heart rate for someone who exercises 5 hours/week.</div>
+              <div class="hw-workspace"></div>
+              <div class="hw-ans">Slope: heart rate decreases by about 3.1 bpm for each additional hour of exercise per week. Prediction: ŷ = −3.1(5) + 82 = −15.5 + 82 = 66.5 bpm</div>
+            </div>
+            <input type="checkbox" class="hw-check" data-id="m1-st-7">
+          </div>
+          <div class="hw-set-footer">
+            <button class="btn btn-ghost hw-show-ans">Show Answers</button>
+            <span style="font-size:.78rem;color:var(--ink-soft)">Checked boxes save to this browser</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /panel-math1 -->
+
+  </div>
+  <footer>Problems are aligned to the NC Standard Course of Study (Math 8 EOG · Math 1 EOC). Difficulty labels Core and Challenge reflect approximate EOG/EOC item types — not all Challenge problems appear on the actual test. Always verify against current NCDPI unpacking documents.</footer>
+</main>
+
+<script src="js/app.js"></script>
+<script>
+  // Course toggle
+  document.querySelectorAll('.ctab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.ctab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.hw-course-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('panel-' + tab.dataset.course).classList.add('active');
+    });
+  });
+
+  // Expand / collapse sets
+  document.querySelectorAll('.hw-set-header').forEach(header => {
+    header.addEventListener('click', e => {
+      if (e.target.closest('.hw-set-footer') || e.target.tagName === 'BUTTON' && e.target.classList.contains('hw-show-ans')) return;
+      const set = header.closest('.hw-set');
+      const body = set.querySelector('.hw-set-body');
+      const toggle = set.querySelector('.hw-set-toggle');
+      body.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  });
+
+  // Show / hide answers per set
+  document.querySelectorAll('.hw-show-ans').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const body = btn.closest('.hw-set-body');
+      const showing = btn.textContent === 'Hide Answers';
+      body.querySelectorAll('.hw-ans').forEach(a => a.classList.toggle('show', !showing));
+      btn.textContent = showing ? 'Show Answers' : 'Hide Answers';
+    });
+  });
+
+  // Persist checkboxes
+  initChecklist('homework');
+</script>
+</body>
+</html>
