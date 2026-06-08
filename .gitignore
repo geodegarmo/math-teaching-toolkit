@@ -1,5 +1,6 @@
-# Claude Code local settings (keep out of repo)
-.claude/settings.local.json
+# Claude Code — keep out of repo
+.claude/
+CLAUDE.md
 
 # OS artifacts
 .DS_Store
